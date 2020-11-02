@@ -19,24 +19,19 @@ namespace Exercicio2
                 Console.WriteLine($"Product #{i} data:");
                 Console.Write("Common, used or imported (c/u/i)? ");
                 string type = Console.ReadLine();
+                Console.Write("Name: ");
+                string name = Console.ReadLine();
+                Console.Write("Price: ");
+                double price = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
                 switch (type)
                 {
                     case "c":
                         {
-                            Console.Write("Name: ");
-                            string name = Console.ReadLine();
-                            Console.Write("Price: ");
-                            double price = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-
                             list.Add(new Product(name, price));
                             break;
                         }
                     case "u":
                         {
-                            Console.Write("Name: ");
-                            string name = Console.ReadLine();
-                            Console.Write("Price: ");
-                            double price = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
                             Console.Write("Manufacture date (DD/MM/YYYY): ");
                             DateTime manufactureDate = DateTime.Parse(Console.ReadLine());
 
@@ -45,10 +40,6 @@ namespace Exercicio2
                         }
                     default:
                         {
-                            Console.Write("Name: ");
-                            string name = Console.ReadLine();
-                            Console.Write("Price: ");
-                            double price = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
                             Console.Write("Customs fee: ");
                             double customsFee = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
